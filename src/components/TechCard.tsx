@@ -6,7 +6,7 @@ interface Iprop {
   techPromise: Promise<Iprops[]>;
 }
 
-const TechCard = ({ techPromise }: Iprops[]) => {
+const TechCard = ({ techPromise }: Iprop) => {
   const technologies = use(techPromise);
   return (
     <div className="grid grid-cols-3 gap-3">
@@ -14,7 +14,7 @@ const TechCard = ({ techPromise }: Iprops[]) => {
         <div className="bg-white col-span-1 border border-neutral-200 rounded-2xl p-5 flex flex-col">
           <div className="flex items-start justify-between mb-4">
             <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-sky-50 text-sky-500">
-              <img className="W-6 h-6" src={tech.icon} alt="" />
+              <img className="w-6 h-6" src={tech.icon} alt="" />
             </div>
             <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-sky-50 text-sky-600">
               {tech.badge}
