@@ -1,6 +1,7 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { Iprops } from "../type";
 import StackItem from "./StackItem";
+import { Bounce, toast } from "react-toastify";
 
 // import React from "react";
 interface Iprop {
@@ -10,6 +11,17 @@ interface Iprop {
 const SideBar = ({ stack, setStack }: Iprop) => {
   const removeAll = () => {
     setStack([]);
+    toast.error("All removed !", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   };
   console.log(stack);
   return (

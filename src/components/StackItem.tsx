@@ -1,6 +1,7 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { Iprops } from "../type";
 import { CiCircleRemove } from "react-icons/ci";
+import { Bounce, toast } from "react-toastify";
 
 // import React from "react";
 interface Iprop {
@@ -12,6 +13,17 @@ const StackItem = ({ stack, setStack }: Iprop) => {
   const removeSingleStack = (tech: Iprops) => {
     const restStack = stack.filter((item) => item.name !== tech.name);
     setStack(restStack);
+    toast.info(`${tech.name} Revomed !`, {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   };
   return (
     <div>
