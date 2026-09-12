@@ -1,21 +1,24 @@
-import React from "react";
+import type { Dispatch, SetStateAction } from "react";
+import type { Iprops } from "../type";
+import StackItem from "./StackItem";
 
-const SideBar = () => {
+// import React from "react";
+interface Iprop {
+  stack: Iprops[];
+  setStack: Dispatch<SetStateAction<Iprops[]>>;
+}
+const SideBar = ({ stack, setStack }: Iprop) => {
+  console.log(stack);
   return (
-    <div className="bg-white border border-neutral-200 rounded-2xl p-5 flex flex-col">
+    <div className=" border-(--color-app-surface) border bg-(--color-app-bg) rounded-2xl p-5 flex flex-col">
       <h3 className="text-2xl font-bold  mb-1.5 text-(--color-app-navy) ">
         Your Stack
       </h3>
       <p className="text-sm text-(--color-app-navy) leading-relaxed mb-4 flex-1"></p>
-      <div className="flex items-center gap-3 text-xs text-neutral-500 mb-4">
-        <span className="bg-neutral-100 text-neutral-600 px-2 py-1 rounded-md font-medium"></span>
-        <span></span>
-        <span className="flex items-center gap-1 ml-auto">
-          <span className="text-neutral-700 font-medium"></span>
-        </span>
-      </div>
-      <button className="w-full py-2.5 rounded-lg bg-(--color-app-navy) text-(--color-app-bg) hover:bg-(--color-app-primary) text-sm font-medium   ">
-        Add to Stack
+      <StackItem stack={stack} setStack={setStack}></StackItem>
+
+      <button className="w-full mt-3 py-2.5 rounded-lg border border-red-200 text-red-500 hover:bg-red-50 text-sm font-medium">
+        Remove All
       </button>
     </div>
   );

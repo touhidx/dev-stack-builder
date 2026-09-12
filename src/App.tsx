@@ -2,6 +2,7 @@ import "./index.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TechGrid from "./components/TechGrid";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Navbar></Navbar>
         <Hero></Hero>
         <TechGrid></TechGrid>
+        <ToastContainer />
       </div>
     </>
   );

@@ -1,7 +1,8 @@
 // import React from "react";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import TechCard from "./TechCard";
 import SideBar from "./SideBar";
+import type { Iprops } from "../type";
 const techPromise = async () => {
   const res = await fetch("/technologies.json");
   const data = await res.json();
@@ -9,6 +10,9 @@ const techPromise = async () => {
 };
 
 const TechGrid = () => {
+  const [promise] = useState(() => techPromise());
+  const [stack, setStack] = useState<Iprops[]>([]);
+
   return (
     <>
       <div>
@@ -19,14 +23,18 @@ const TechGrid = () => {
         <p className="py-3">
           Pick one technology per category to build your ideal stack.
         </p>
-        <div className="grid grid-cols-4 bg-(--color-app-surface) rounded-xl gap-3  p-3">
+        <div className="grid grid-cols-4 bg-(--color-app-surface) rounded-xl gap-5  p-3">
           <div className="col-span-3">
             <Suspense fallback={<p>Loading ... ...</p>}>
-              <TechCard techPromise={techPromise()}></TechCard>
+              <TechCard
+                techPromise={promise}
+                stack={stack}
+                setStack={setStack}
+              ></TechCard>
             </Suspense>
           </div>
           <div className="col-span-1">
-            <SideBar></SideBar>
+            <SideBar stack={stack} setStack={setStack}></SideBar>
           </div>
         </div>
       </div>
