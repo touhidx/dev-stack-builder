@@ -4,7 +4,7 @@ import Logo from "../assets/logo-text.png";
 const Navbar = () => {
   return (
     <>
-      <div className="sticky top-0 bg-[rgba(249,247,247,0.75)] backdrop-blur-md ">
+      <div className="sticky top-0 bg-[rgba(249,247,247,0.75)] backdrop-blur-md">
         <div className="flex justify-between items-center py-5 px-3 container mx-auto bg-(--app-bg)">
           <img
             className="h-8 w-30 text-(--color-brand-navy)"

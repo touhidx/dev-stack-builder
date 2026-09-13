@@ -15,7 +15,7 @@ const StackItem = ({ stack, setStack }: Iprop) => {
     setStack(restStack);
     toast.info(`${tech.name} Revomed !`, {
       position: "bottom-right",
-      autoClose: 5000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: false,
       pauseOnHover: true,
@@ -28,7 +28,10 @@ const StackItem = ({ stack, setStack }: Iprop) => {
   return (
     <div>
       {stack.map((tech) => (
-        <div className="flex justify-between items-center py-2.5 border-none bg-(--color-light) shadow rounded-2xl my-2 px-2.5">
+        <div
+          key={tech.id}
+          className="flex justify-between items-center py-2.5 border-none bg-(--color-light) shadow rounded-2xl my-2 px-2.5"
+        >
           <div className="flex justify-start items-center ">
             <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-(--color-bg-light) border border-(--color-brand)/10">
               <img

@@ -13,7 +13,7 @@ const SideBar = ({ stack, setStack }: Iprop) => {
     setStack([]);
     toast.error("All removed !", {
       position: "bottom-right",
-      autoClose: 5000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: false,
       pauseOnHover: true,
@@ -23,7 +23,7 @@ const SideBar = ({ stack, setStack }: Iprop) => {
       transition: Bounce,
     });
   };
-  console.log(stack);
+  // console.log(stack);
   return (
     <div className=" border-(--color-app-surface) border bg-(--color-app-bg) rounded-2xl p-5 ">
       <h3 className="text-2xl font-bold  mb-1.5 text-(--color-app-navy) ">

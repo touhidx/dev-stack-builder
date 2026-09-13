@@ -21,7 +21,7 @@ const TechCard = ({ techPromise, stack, setStack }: Iprop) => {
     } else {
       toast.success("Your Stack is Added", {
         position: "bottom-right",
-        autoClose: 5000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: false,
         pauseOnHover: true,
@@ -35,7 +35,7 @@ const TechCard = ({ techPromise, stack, setStack }: Iprop) => {
   };
 
   return (
-    <div className="grid grid-cols-3 gap-3">
+    <div className="grid lg:grid-cols-3 gap-3">
       {technologies.map((tech) => {
         const isAdded = stack.some((item) => item.id === tech.id);
         return (
@@ -83,7 +83,7 @@ const TechCard = ({ techPromise, stack, setStack }: Iprop) => {
               onClick={() => handleSelectStack(tech)}
               className={`w-full py-2.5 rounded-xl text-sm font-medium transition-colors ${
                 isAdded
-                  ? "bg-(--color-bg-light) text-(--color-brand-dark)/60 cursor-not-allowed border border-(--color-brand)/20"
+                  ? "bg-(--color-bg-light) text-(--color-brand-dark) cursor-not-allowed border border-(--color-brand)"
                   : "bg-(--color-brand-dark) text-(--color-bg-light) hover:bg-(--color-brand)"
               }`}
             >
