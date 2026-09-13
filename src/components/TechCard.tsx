@@ -1,7 +1,7 @@
 // import React from "react";
 import { IoIosStarOutline } from "react-icons/io";
 import type { Iprops } from "../type";
-import { use, useState, type Dispatch, type SetStateAction } from "react";
+import { use, type Dispatch, type SetStateAction } from "react";
 import { Bounce, toast } from "react-toastify";
 interface Iprop {
   techPromise: Promise<Iprops[]>;
@@ -11,10 +11,10 @@ interface Iprop {
 
 const TechCard = ({ techPromise, stack, setStack }: Iprop) => {
   const technologies = use(techPromise);
-  const [isAdded, setIsAdded] = useState<boolean>(false);
+  // const [isClicked, setIsClicked] = useState<boolean>(false);
 
   const handleSelectStack = (tech: Iprops): void => {
-    setIsAdded(true);
+    // setIsClicked(true);
     const isAlReadyAdded = stack.some((item) => item.id === tech.id);
     if (isAlReadyAdded) {
       setStack(stack.filter((item) => item.id !== tech.id));
@@ -41,7 +41,11 @@ const TechCard = ({ techPromise, stack, setStack }: Iprop) => {
         return (
           <div
             key={tech.id}
-            className="bg-(--color-app-bg) col-span-1 border border-(--color-brand)/15 rounded-2xl p-5 flex flex-col shadow-sm"
+            className={
+              isAdded
+                ? "bg-(--color-app-bg) col-span-1 border border-(--color-brand-dark) rounded-2xl p-5 flex flex-col shadow-xl"
+                : "bg-(--color-app-bg) col-span-1 border border-(--color-brand)/15 rounded-2xl p-5 flex flex-col shadow-sm"
+            }
           >
             <div className="flex items-start justify-between mb-4">
               <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-(--color-bg-light) border border-(--color-brand)/10">
