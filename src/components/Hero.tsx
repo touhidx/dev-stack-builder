@@ -8,7 +8,12 @@ const Hero = () => {
         <div className="col-span-2 justify-center items-center max-sm:pt-7 pt-30 max-sm:col-span-1 ">
           <h1 className="text-(--color-app-navy) md:text-5xl text-2xl max-sm:text-center font-extrabold max-sm:pb-2 pb-7">
             Build Your Ideal
-            <span className="block bg-linear-to-r from-[#3F72AF] via-[#315F99] to-[#112D4E]  bg-clip-text text-transparent">
+            <span
+              className="block bg-[linear-gradient(90deg,#112D4E_0%,#3F72AF_45%,#DBE2EF_100%)]
+    bg-clip-text
+    text-transparent
+    font-semibold  "
+            >
               Development Stack
             </span>
           </h1>

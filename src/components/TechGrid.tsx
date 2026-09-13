@@ -18,7 +18,17 @@ const TechGrid = () => {
       <div className="">
         <h1 className="text-5xl font-bold max-sm:text-2xl max-sm:px-3 max-sm:text-center">
           Explore the
-          <span className="text-(--color-app-navy)">Technologies</span>
+          <span
+            className="
+    ml-1
+    bg-[linear-gradient(90deg,#112D4E_0%,#3F72AF_45%,#DBE2EF_100%)]
+    bg-clip-text
+    text-transparent
+    font-semibold
+  "
+          >
+            Technologies
+          </span>{" "}
         </h1>
         <p className="py-3 max-sm:text-center max-sm:text-xs max-sm:py-1 max-sm:mb-2">
           Pick one technology per category to build your ideal stack.
