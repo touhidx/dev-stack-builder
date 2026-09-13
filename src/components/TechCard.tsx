@@ -35,7 +35,7 @@ const TechCard = ({ techPromise, stack, setStack }: Iprop) => {
   };
 
   return (
-    <div className="grid md:grid-cols-3 gap-3">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {technologies.map((tech) => {
         const isAdded = stack.some((item) => item.id === tech.id);
         return (
@@ -43,7 +43,6 @@ const TechCard = ({ techPromise, stack, setStack }: Iprop) => {
             key={tech.id}
             className="bg-(--color-app-bg) col-span-1 border border-(--color-brand)/15 rounded-2xl p-5 flex flex-col shadow-sm"
           >
-            {/* Top Section: Icon & Badge */}
             <div className="flex items-start justify-between mb-4">
               <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-(--color-bg-light) border border-(--color-brand)/10">
                 <img
@@ -57,7 +56,6 @@ const TechCard = ({ techPromise, stack, setStack }: Iprop) => {
               </span>
             </div>
 
-            {/* Content: Name & Description */}
             <h3 className="text-base font-bold mb-1.5 text-(--color-brand-dark)">
               {tech.name}
             </h3>
@@ -65,7 +63,6 @@ const TechCard = ({ techPromise, stack, setStack }: Iprop) => {
               {tech.description}
             </p>
 
-            {/* Metadata Bar */}
             <div className="flex items-center gap-2.5 text-xs text-(--color-brand-dark)/70 mb-4">
               <span className="bg-(--color-bg-light) text-(--color-brand-dark) px-2.5 py-1 rounded-md font-medium border border-(--color-brand)/10">
                 {tech.category}
@@ -77,7 +74,6 @@ const TechCard = ({ techPromise, stack, setStack }: Iprop) => {
               </span>
             </div>
 
-            {/* Primary Action Button */}
             <button
               disabled={isAdded}
               onClick={() => handleSelectStack(tech)}

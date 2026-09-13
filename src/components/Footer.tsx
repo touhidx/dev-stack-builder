@@ -3,19 +3,19 @@ import Logo from "../assets/logo-text.png";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-white border-t border-gray-100 text-gray-600 font-sans">
+    <div className="w-full bg-white border-t border-gray-100 text-gray-600 font-sans container mx-auto">
       <div className=" mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
           <div className="md:col-span-2 space-y-4">
-            <div className="flex items-center justify-around space-x-2">
+            <div className="flex items-center justify-start max-sm:justify-around space-x-2">
               <img src={Logo} alt="" />
             </div>
 
-            <p className="text-sm text-gray-500 text-justify leading-relaxed max-w-sm">
+            <p className="text-sm text-gray-500 text-center leading-relaxed max-w-sm">
               Curated tools, technologies, and resources for developers building
               modern software.
             </p>
-            <div className="flex items-center justify-around max-sm:px-10 space-x-4 text-center pt-2 text-sm font-medium text-gray-700">
+            <div className="flex items-center justify-start max-sm:justify-around max-sm:px-10 space-x-4 text-center pt-2 text-sm font-medium text-gray-700">
               <a
                 href="#github"
                 className="hover:text-gray-900 transition-colors"
@@ -128,7 +128,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="border-t border-gray-300 p-3 flex flex-row items-center justify-between text-xs text-gray-400">
+      <div className="border-t border-gray-300 p-6 flex flex-row items-center justify-between text-xs text-gray-400">
         <p className="">© 2026 Dev Stack. All rights reserved.</p>
         <div className="flex items-center space-x-4  sm:mt-0">
           <a href="#privacy" className="hover:text-gray-600 transition-colors">

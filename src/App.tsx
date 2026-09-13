@@ -8,11 +8,14 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <div className="container mx-auto w-full overflow-x-hidden">
+      <div className="w-full overflow-x-clip">
         <Navbar></Navbar>
-        <Hero></Hero>
-        <TechGrid></TechGrid>
-        <ToastContainer />
+
+        <div className="container mx-auto">
+          <Hero></Hero>
+          <TechGrid></TechGrid>
+          <ToastContainer />
+        </div>
         <Footer></Footer>
       </div>
     </>
