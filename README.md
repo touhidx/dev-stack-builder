@@ -30,19 +30,19 @@ npm run dev
 ## React Concepts — Q&A
 
 1.  What is JSX, and why is it used in React?
-    JSX lets me write HTML-looking code directly inside my JavaScript files. Instead of calling `React.createElement()` over and over, I just write tags like `<div>` or `<h1>` normally. It makes it way easier to picture what the UI will actually look like while I'm writing the component.
+    JSX let write HTML-looking code directly inside my JavaScript files.
 
 2.  What is the difference between props and state?
-    Props are data passed into a component from its parent — the component just receives them and can't change them itself. State is data that lives inside the component and can change over time. In this project, I passed technology info down to the card components as props, and used state to keep track of things like which items are in the stack.
+    Props are data passed into a component from its parent — the component just receives them and can't change them itself.
 
 3.  What does the useState hook do, and where did you use it in this project?
-    `useState` lets a component hold a value that can change, and re-renders the UI automatically whenever that value updates. I used it to store the array of technologies in "Your Stack," and also to track the loading state while the JSON data is being fetched.
+    useState lets a component hold a value that can change, and re-renders the UI automatically whenever that value updates. I used it to store the array of technologies in "Your Stack," and also to track the loading state while the JSON data is being fetched.
 
 4.  What does the useEffect hook do, and why did you need it to load the JSON data?
-    `useEffect` runs some code after the component renders, which is perfect for things like fetching data. I used it to load the `technologies.json` file once when the component first mounts, then saved that data into state so it could be displayed.
+    useEffect runs some code after the component renders, which is perfect for things like fetching data. I used it to load the technologies.json file once when the component first mounts, then saved that data into state so it could be displayed.
 
 5.  Why does every item in a .map() list need a unique key prop?
-    React uses the `key` to keep track of which item is which between re-renders. Without a unique key, React can get confused about what was added, removed, or changed, which can lead to bugs or extra re-rendering.
+    React uses the key to keep track of which item is which between re-renders. Without a unique key, React can get confused about what was added, removed, or changed, which can lead to bugs or extra re-rendering.
 
 6.  What is conditional rendering? Show one place you used it.
     Conditional rendering means showing different UI depending on a condition. I used it in the "Your Stack" panel — if the stack array is empty, it shows an empty-state message, otherwise it renders the list of added technologies.

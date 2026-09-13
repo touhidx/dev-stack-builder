@@ -39,7 +39,7 @@ const Navbar = () => {
             <button className="btn sm:mr-3 sm:px-4 sm:py-2 mr-1 px-2 py-1 max-sm:text-[8px] text-(--color-app-navy) bg-(--color-app-surface) hover:bg-(--color-app-navy) hover:text-(--color-app-bg) border-none rounded-xl">
               Sign In
             </button>
-            <button className="btn px-4 py-2 max-sm:px-2 max-sm:py-.25 max-sm:text-[8px] bg-(--color-app-primary) text-(--color-app-bg) hover:bg-(--color-app-navy) border-none rounded-xl">
+            <button className="btn px-4 py-2 max-sm:px-2 max-sm:py-.25 max-sm:text-[8px] bg-linear-to-r from-(--color-app-primary) to-(--color-app-navy)  text-(--color-app-bg) hover:bg-(--color-app-navy) border-none rounded-xl">
               Sign Up
             </button>
           </div>

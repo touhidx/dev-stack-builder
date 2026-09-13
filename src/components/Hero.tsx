@@ -1,5 +1,6 @@
 // import React from "react";
 import HeroImg from "../assets/banner-stack.png";
+import "../index.css";
 
 const Hero = () => {
   return (
@@ -9,10 +10,10 @@ const Hero = () => {
           <h1 className="text-(--color-app-navy) md:text-5xl text-2xl max-sm:text-center font-extrabold max-sm:pb-2 pb-7">
             Build Your Ideal
             <span
-              className="block bg-[linear-gradient(90deg,#112D4E_0%,#3F72AF_45%,#DBE2EF_100%)]
+              className="block   bg-[linear-gradient(90deg,#112D4E_0%,#3F72AF_45%,#DBE2EF_100%)]
     bg-clip-text
     text-transparent
-    font-semibold  "
+    font-semibold "
             >
               Development Stack
             </span>
