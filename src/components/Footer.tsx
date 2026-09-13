@@ -15,7 +15,7 @@ const Footer = () => {
               Curated tools, technologies, and resources for developers building
               modern software.
             </p>
-            <div className="flex items-center space-x-4 pt-2 text-sm font-medium text-gray-700">
+            <div className="flex items-center justify-around max-sm:px-10 space-x-4 text-center pt-2 text-sm font-medium text-gray-700">
               <a
                 href="#github"
                 className="hover:text-gray-900 transition-colors"
@@ -128,9 +128,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="border-t border-gray-100 pt-8 flex flex-row sm:flex-row items-center justify-between text-xs text-gray-400">
-        <p>© 2026 Dev Stack. All rights reserved.</p>
-        <div className="flex space-x-4 mt-4 sm:mt-0">
+      <div className="border-t border-gray-300 p-3 flex flex-row items-center justify-between text-xs text-gray-400">
+        <p className="">© 2026 Dev Stack. All rights reserved.</p>
+        <div className="flex items-center space-x-4  sm:mt-0">
           <a href="#privacy" className="hover:text-gray-600 transition-colors">
             Privacy
           </a>

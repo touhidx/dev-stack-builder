@@ -35,7 +35,7 @@ const TechCard = ({ techPromise, stack, setStack }: Iprop) => {
   };
 
   return (
-    <div className="grid lg:grid-cols-3 gap-3">
+    <div className="grid md:grid-cols-3 gap-3">
       {technologies.map((tech) => {
         const isAdded = stack.some((item) => item.id === tech.id);
         return (
